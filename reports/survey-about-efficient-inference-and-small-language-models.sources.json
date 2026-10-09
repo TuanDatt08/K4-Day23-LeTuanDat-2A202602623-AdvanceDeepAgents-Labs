@@ -1,0 +1,138 @@
+[
+  {
+    "n": 1,
+    "id": "https://aclanthology.org/2025.ranlp-1.93.pdf",
+    "url": "https://aclanthology.org/2025.ranlp-1.93.pdf",
+    "title": "A Survey on Small Language Models",
+    "date": "n.d.",
+    "source": "web"
+  },
+  {
+    "n": 2,
+    "id": "https://dl.acm.org/doi/10.1145/3711896.3736563",
+    "url": "https://dl.acm.org/doi/10.1145/3711896.3736563",
+    "title": "A Survey on Small Language Models in the Era of Large Language Models: Architecture, Capabilities, and Trustworthiness",
+    "date": "2025-08-03",
+    "source": "web"
+  },
+  {
+    "n": 3,
+    "id": "2308.07633",
+    "url": "https://huggingface.co/papers/2308.07633",
+    "title": "A Survey on Model Compression for Large Language Models",
+    "date": "2023-08-15",
+    "source": "hf-search"
+  },
+  {
+    "n": 4,
+    "id": "https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00704/125482/A-Survey-on-Model-Compression-for-Large-Language",
+    "url": "https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00704/125482/A-Survey-on-Model-Compression-for-Large-Language",
+    "title": "A Survey on Model Compression for Large Language Models",
+    "date": "2024-11-27",
+    "source": "web"
+  },
+  {
+    "n": 5,
+    "id": "https://github.com/NVIDIA/TensorRT-LLM/",
+    "url": "https://github.com/NVIDIA/TensorRT-LLM/",
+    "title": "TensorRT-LLM",
+    "date": "n.d.",
+    "source": "web"
+  },
+  {
+    "n": 6,
+    "id": "https://github.com/arpera/flashinfer",
+    "url": "https://github.com/arpera/flashinfer",
+    "title": "FlashInfer",
+    "date": "n.d.",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "https://dl.acm.org/doi/full/10.1145/3754448",
+    "url": "https://dl.acm.org/doi/full/10.1145/3754448",
+    "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+    "date": "2025-09-04",
+    "source": "web"
+  },
+  {
+    "n": 8,
+    "id": "2609.26333",
+    "url": "https://huggingface.co/papers/2609.26333",
+    "title": "Disaggregated Quantization: Specializing LLM Prefill and Decode",
+    "date": "2026-09-22",
+    "source": "hf-daily"
+  },
+  {
+    "n": 9,
+    "id": "2604.09048",
+    "url": "https://huggingface.co/papers/2604.09048",
+    "title": "Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures",
+    "date": "2026-04-10",
+    "source": "hf-search"
+  },
+  {
+    "n": 10,
+    "id": "2610.01780",
+    "url": "https://huggingface.co/papers/2610.01780",
+    "title": "RealCompanion: Benchmarking Human Understanding from Reasoning over Longitudinal Real-World Conversations",
+    "date": "2026-10-01",
+    "source": "hf-daily"
+  },
+  {
+    "n": 11,
+    "id": "2608.05224",
+    "url": "https://huggingface.co/papers/2608.05224",
+    "title": "Small Foundation Models of Human Cognition and Behaviour",
+    "date": "2026-08-09",
+    "source": "hf-search"
+  },
+  {
+    "n": 12,
+    "id": "2609.38169",
+    "url": "https://huggingface.co/papers/2609.38169",
+    "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+    "date": "2026-09-29",
+    "source": "hf-daily"
+  },
+  {
+    "n": 13,
+    "id": "https://github.com/Llaminar/llaminar",
+    "url": "https://github.com/Llaminar/llaminar",
+    "title": "Llaminar",
+    "date": "n.d.",
+    "source": "web"
+  },
+  {
+    "n": 14,
+    "id": "2511.06174",
+    "url": "https://huggingface.co/papers/2511.06174",
+    "title": "LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs",
+    "date": "2025-11-09",
+    "source": "hf-search"
+  },
+  {
+    "n": 15,
+    "id": "2405.18628",
+    "url": "https://huggingface.co/papers/2405.18628",
+    "title": "Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference",
+    "date": "2024-05-28",
+    "source": "hf-search"
+  },
+  {
+    "n": 16,
+    "id": "https://aclanthology.org/2025.inlg-main.32.pdf",
+    "url": "https://aclanthology.org/2025.inlg-main.32.pdf",
+    "title": "Taming the Titans: A Survey of Efficient LLM Inference Serving",
+    "date": "n.d.",
+    "source": "web"
+  },
+  {
+    "n": 17,
+    "id": "2609.33295",
+    "url": "https://huggingface.co/papers/2609.33295",
+    "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+    "date": "2026-09-27",
+    "source": "hf-search"
+  }
+]

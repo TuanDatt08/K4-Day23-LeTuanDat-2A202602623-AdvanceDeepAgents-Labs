@@ -107,3 +107,30 @@ Kết quả nằm ở `reports/survey-about-world-model.md` cùng `.sources.json
 - Mỗi lần chạy tốn token LLM và thời gian sandbox. `tokens` trong `meta.json` chỉ đếm tin nhắn của lead, chưa gồm subagent, nên chi phí thật cao hơn. `open_sandbox()` luôn dừng và xóa sandbox khi kết thúc, kể cả khi lỗi. Đừng bỏ qua nó.
 - **Không đưa bí mật vào sandbox.** Sandbox không ngăn được prompt injection hay việc đẩy dữ liệu ra mạng; một trang web độc hại có thể khiến agent chạy lệnh bên trong sandbox. Vì vậy mọi công cụ gọi mạng và mọi khóa ở lại phía host.
 - Nội dung lấy từ web là **dữ liệu không đáng tin**: agent không được làm theo chỉ dẫn nằm trong đó.
+
+## 8. Bài nộp: cách chạy và đọc kết quả
+
+```bash
+python -m venv .venv && .venv\Scripts\activate          # Windows (Linux/macOS: source .venv/bin/activate)
+pip install -r requirements.txt
+cp .env.example .env                                     # điền LAB_MODEL + khóa LLM, DAYTONA_API_KEY, EXA_API_KEY
+python test_lab.py                                       # kiểm tra offline: retry, slugify, validator, save_outputs
+python tools.py                                          # thử 5 công cụ với API thật
+python research.py "survey about world model"            # một chủ đề; in tiến độ từng lời gọi công cụ
+python self_check.py                                     # kiểm tra trước khi nộp
+```
+
+Mỗi chủ đề trong `reports/` có ba tệp (tải nguyên từ sandbox, không sửa tay):
+
+| Tệp | Nội dung |
+|---|---|
+| `<slug>.md` | Báo cáo: TL;DR, Background, 3-6 phần theo chủ đề, Trends and open problems, `## References` (do `finalize_citations.py` sinh) |
+| `<slug>.sources.json` | Danh sách nguồn `{n, id, url, title, date, source}`; `[n]` trong báo cáo trỏ tới mục có cùng `n` |
+| `<slug>.meta.json` | Bằng chứng chấm điểm: `model`, `elapsed_s`, `subagent_calls`, `tool_calls`, `tokens` (chỉ của lead), `n_sources`, `source_families` |
+
+Kiểm tra trích dẫn của một báo cáo: `python check_citations.py reports/<slug>.md reports/<slug>.sources.json`.
+
+Ghi chú cài đặt:
+- arXiv giới hạn theo IP rất chặt (chỉ 1 request thành công rồi HTTP 429 nhiều phút): `arxiv_search` thử lại với `cap` 60 s, researcher chỉ gọi nó tối đa 2 lần; họ nguồn thứ ba đến từ `hf_daily_papers(days=14, keyword=...)`, công cụ quét nhiều ngày Daily Papers.
+- Exa hiện báo giới hạn tốc độ bằng HTTP 429 (cùng lỗi JSON-RPC), có thể cả HTTP 200 kèm cờ trong `result._meta`: cả hai đều được retry. Khóa Exa gửi qua header `Authorization`, không nằm trong URL, và luôn được che trong chuỗi `ERROR:`.
+- Lead và mỗi subagent có `ModelCallLimitMiddleware`, `ToolCallLimitMiddleware` và `ModelRetryMiddleware` (mạng chập chờn không làm hỏng cả lần chạy); `recursion_limit=1000`.
