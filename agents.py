@@ -85,7 +85,9 @@ Follow these steps in order.
    If fewer than 3 of arxiv / hf-search / hf-daily / web are printed, delegate one more researcher to a missing family
    (e.g. "use only hf_daily_papers with days=21 and keyword '<word>'"), merge its notes and check again.
 
-5. WRITE THE REPORT BODY to {REPORT_PATH} with `write_file`, in English, with exactly this structure:
+5. WRITE THE REPORT BODY to {REPORT_PATH} with `write_file`, in English, with exactly this structure. The headings
+   "## TL;DR", "## Background" and "## Trends and open problems" are fixed: copy them character for character
+   (graders and scripts search for them); only the theme headings are yours to name.
 
    # <Title of the survey>
 
